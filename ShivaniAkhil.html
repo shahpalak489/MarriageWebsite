@@ -208,7 +208,7 @@
 
     <section id="counter" class="img-bg-3 img-bg-4 row">
       <div class="text-center" >
-        <h2 >Counting the minutes for the big moment!</h2>Countdown
+        <h2>Successfully completed and still Counting!!!</h2>
         <div class="countdown row">
           <div class="time_circles">
             <canvas> </canvas>
@@ -393,18 +393,11 @@
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    if (days < 0){
-      days = '00';
-      hours = '00';
-      minutes = '00';
-      seconds = '00';
-    }
-      
     // Output the result in an element with id
-    document.getElementById("days").innerHTML = days ;
-    document.getElementById("hours").innerHTML = hours ;
-    document.getElementById("minutes").innerHTML = minutes ;
-    document.getElementById("seconds").innerHTML = seconds ;
+    document.getElementById("days").innerHTML = Math.abs(days) ;
+    document.getElementById("hours").innerHTML = Math.abs(hours) ;
+    document.getElementById("minutes").innerHTML = Math.abs(minutes) ;
+    document.getElementById("seconds").innerHTML = Math.abs(seconds) ;
   }, 1000);
 
   window.onscroll = function() {myFunction()};
